@@ -29,7 +29,7 @@ import { arbitrum, mainnet, polygon } from "wagmi/chains";
 import { useAccount } from "wagmi";
 import { useWeb3Modal } from "@web3modal/react";
 
-const chains = [arbitrum, mainnet, polygon];
+const chains = [mainnet];
 //console.log(chains[0])
 const PROJECT_ID = "4ff178b5adf37e8779469102693e824b";
 // Wagmi client
