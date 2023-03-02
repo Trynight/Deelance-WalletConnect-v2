@@ -177,7 +177,12 @@ function Navbar() {
               )} */}
               <div className="-nav-connect-btn">
                 {/* <Web3Button icon={false} /> */}
-                <button onClick={() => open()}>
+                <button
+                  onClick={() => {
+                    open();
+                    setShowMediaIcons(false);
+                  }}
+                >
                   {!address ? "connect" : ""}{" "}
                   {address && (
                     <>
