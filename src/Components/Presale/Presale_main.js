@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../UserContext";
 import "./Presale.css";
-import {ethers} from 'ethers';
+import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
 import PrePop from "./PrePop";
 import OnRamp from "./onRamp";
@@ -12,6 +12,7 @@ import withReactContent from "sweetalert2-react-content";
 import Fire from "../../assets/fire.webp";
 import Bullet from "../../assets/de.webp";
 import { Web3Button } from "@web3modal/react";
+import ConnectWalletBtn from "Components/ConnectWalletBtn";
 
 const MySwal = withReactContent(Swal);
 
@@ -448,8 +449,9 @@ function Presale_main() {
                       </a>
                     </div>
                   ) : (
-                    <div className="text-center align-items-center d-flex jsa ">
-<Web3Button icon={false} />
+                    <div className="text-center align-items-center d-flex jsa mb-3">
+                      {/* <Web3Button icon={false} /> */}
+                      <ConnectWalletBtn normal={true} />
                     </div>
                   )}
                 </div>

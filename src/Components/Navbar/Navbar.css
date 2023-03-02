@@ -147,6 +147,7 @@ a:hover {
 }
 
 .about-dropdown {
+  line-height: 1;
   position: relative;
 }
 
