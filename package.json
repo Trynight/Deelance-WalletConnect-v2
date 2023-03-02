@@ -52,7 +52,7 @@
   },
   "scripts": {
     "start": "react-scripts  start --openssl-legacy-provider",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "build": "react-scripts build --openssl-legacy-provider",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sync": "yarn locize sync --path ./src/translations --api-key 0ea79762-ac74-48b0-9a09-5fb530cf5d5c --project-id a6ad41b6-ac0f-4312-9b7a-7dbcd306fa2e --reference-language-only false"
