@@ -12,10 +12,14 @@ import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
 import LanguageSelector from "Components/LanguageSelector";
 import { IoMdClose } from "react-icons/io";
-import { Web3Button } from "@web3modal/react";
+import { useWeb3Modal, Web3Button, Web3Modal } from "@web3modal/react";
 import LinkScroller from "Components/LinkScroller";
+import { useAccount } from "wagmi";
 
 function Navbar() {
+  const { open } = useWeb3Modal();
+  const { address } = useAccount();
+
   const { connectWallet, disconnectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [showComp, setShowComp] = useState(false);
@@ -172,7 +176,16 @@ function Navbar() {
                 </li>
               )} */}
               <div className="-nav-connect-btn">
-                <Web3Button icon={false} />
+                {/* <Web3Button icon={false} /> */}
+                <button onClick={() => open()}>
+                  {!address ? "connect" : ""}{" "}
+                  {address && (
+                    <>
+                      {address.slice(0, 4)}...
+                      {address.slice(address.length - 4, address.length)}{" "}
+                    </>
+                  )}
+                </button>
               </div>
 
               {!isBelow1080px && <LanguageSelector />}

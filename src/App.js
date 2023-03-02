@@ -24,20 +24,23 @@ import {
   walletConnectProvider,
 } from "@web3modal/ethereum";
 import { Web3Modal } from "@web3modal/react";
-import { configureChains, createClient, WagmiConfig, useProvider  } from "wagmi";
+import {
+  configureChains,
+  createClient,
+  WagmiConfig,
+  useProvider,
+  useAccount,
+} from "wagmi";
 import { arbitrum, mainnet, polygon } from "wagmi/chains";
-import { useAccount } from "wagmi";
 import { useWeb3Modal } from "@web3modal/react";
 
 const chains = [mainnet];
 //console.log(chains[0])
 const PROJECT_ID = "4ff178b5adf37e8779469102693e824b";
 // Wagmi client
-const {provider } = configureChains(chains, [
+const { provider } = configureChains(chains, [
   walletConnectProvider({ projectId: PROJECT_ID }),
 ]);
-
-
 
 //console.log("provider", provider)
 const wagmiClient = createClient({
@@ -54,9 +57,6 @@ const wagmiClient = createClient({
 // Web3Modal Ethereum Client
 const ethereumClient = new EthereumClient(wagmiClient, chains);
 
-
-
-
 function App() {
   const { open } = useWeb3Modal();
   const [loading, setLoading] = useState(true);
@@ -65,13 +65,12 @@ function App() {
   const [provider, setProvider] = useState(defaultProvider);
   const myProvider = useProvider();
   const { address: account } = useAccount();
-  const [contracts, setContracts] = useState({
-  })
+  const [contracts, setContracts] = useState({});
 
   useEffect(() => {
-    if(!account) return;
+    if (!account) return;
     const contracts = {};
-  
+
     for (const [token, address] of Object.entries(ContractAddr)) {
       contracts[token] = new ethers.Contract(
         address,
@@ -83,16 +82,16 @@ function App() {
     setProvider(myProvider);
   }, [account]);
 
-  contracts.Main =  new ethers.Contract(
+  contracts.Main = new ethers.Contract(
     ContractAddr.Main,
     BigNFTABI,
     defaultProvider
   );
 
   useEffect(() => {
-    setLoading(false)
-  }, [])
-  
+    setLoading(false);
+  }, []);
+
   if (loading) {
     return (
       <div className="-app-loader">
@@ -129,10 +128,7 @@ function App() {
           </Routes>
         </Router>
       </UserContext.Provider>
-      <Web3Modal
-        projectId={PROJECT_ID}
-        ethereumClient={ethereumClient}
-      />
+      <Web3Modal projectId={PROJECT_ID} ethereumClient={ethereumClient} />
     </>
   );
 }
