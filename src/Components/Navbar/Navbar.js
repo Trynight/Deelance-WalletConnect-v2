@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaAngleDown } from "react-icons/fa";
@@ -13,6 +13,7 @@ import { Link as ScrollLink } from "react-scroll";
 import LanguageSelector from "Components/LanguageSelector";
 import { IoMdClose } from "react-icons/io";
 import { Web3Button } from "@web3modal/react";
+import LinkScroller from "Components/LinkScroller";
 
 function Navbar() {
   const { connectWallet, disconnectWallet, provider, contracts, account } =
@@ -66,6 +67,7 @@ function Navbar() {
     setIsHover((val) => !val);
   };
   const { t } = useTranslation("common");
+  const location = useLocation();
 
   return (
     <>
@@ -100,73 +102,60 @@ function Navbar() {
               </div>
             )}
 
-            <ul>
-              <li>
-                <NavLink to="/">{t("Home")}</NavLink>
-              </li>
-              <div className="drop-btn" ref={dropdownRef}>
-                <a
-                  href="#drop"
-                  className="dp"
-                  onMouseEnter={() =>
-                    isBellow1024px ? null : setIsHover(true)
-                  }
-                  onMouseLeave={() =>
-                    isBellow1024px ? null : setIsHover(false)
-                  }
-                  onClick={() => dropdownToggler()}
-                >
+            <div className="-nav-links">
+              <NavLink className="-nav-anchor" to="/">
+                {t("Home")}
+              </NavLink>
+
+              <div className="about-dropdown" ref={dropdownRef}>
+                <a className="-nav-anchor">
                   {t("About")}
                   <FaAngleDown />
                 </a>
-                <div
-                  className={isHover ? "dropdown-active" : "dropdown"}
-                  onMouseEnter={() =>
-                    isBellow1024px ? null : setIsHover(true)
-                  }
-                  onMouseLeave={() =>
-                    isBellow1024px ? null : setIsHover(false)
-                  }
-                >
-                  <li>
-                    <ScrollLink
-                      to="about-us"
-                      style={{ cursor: "pointer" }}
-                      className="a-link"
+
+                <div className="nav-about-dropdown-wrapper">
+                  <div className="nav-about-dropdown-content">
+                    <LinkScroller
+                      id="about-us"
+                      to="/"
+                      className="-nav-anchor"
+                      wait={location.pathname === "/" ? 0 : 100}
                       onClick={() => setShowMediaIcons(false)}
+                      scrollerOptions={{
+                        offset: -20,
+                      }}
                     >
-                      {t("About")}
-                    </ScrollLink>
-                  </li>
+                      About
+                    </LinkScroller>
 
-                  <li>
-                    <NavLink to="/team">{t("Team")}</NavLink>
-                  </li>
+                    <NavLink className="-nav-anchor" to="/team">
+                      {t("Team")}
+                    </NavLink>
 
-                  <li>
                     <a
                       href="https://docs.deelance.com/"
                       target="_blank"
                       rel="noreferrer"
+                      className="-nav-anchor"
                     >
                       {t("Whitepaper")}
                     </a>
-                  </li>
+                  </div>
                 </div>
               </div>
 
-              <li>
-                <NavLink to="/rewards">{t("header.links.win")}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/nft-market">{t("Nft Marketplace")}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/job-portal">{t("find job")}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/academy">{t("Academy")}</NavLink>
-              </li>
+              <NavLink className="-nav-anchor" to="/rewards">
+                {t("header.links.win")}
+              </NavLink>
+              <NavLink className="-nav-anchor" to="/nft-market">
+                {t("Nft Marketplace")}
+              </NavLink>
+              <NavLink className="-nav-anchor" to="/job-portal">
+                {t("find job")}
+              </NavLink>
+              <NavLink className="-nav-anchor" to="/academy">
+                {t("Academy")}
+              </NavLink>
               {/* {account ? (
                 <li>
                   <a href="/" className="p1-btn" onClick={disconnectButt}>
@@ -182,9 +171,12 @@ function Navbar() {
                   </a>
                 </li>
               )} */}
-              <li><Web3Button icon={false} /></li>
+              <div className="-nav-connect-btn">
+                <Web3Button icon={false} />
+              </div>
+
               {!isBelow1080px && <LanguageSelector />}
-            </ul>
+            </div>
           </div>
 
           {isBelow1080px && (
@@ -193,12 +185,12 @@ function Navbar() {
 
           {isBelow1080px && (
             <div className="hamburger-menu">
-              <a
-                href="#home"
+              <button
                 onClick={() => setShowMediaIcons(!showMediaIcons)}
+                className="hamburger"
               >
                 <GiHamburgerMenu />
-              </a>
+              </button>
             </div>
           )}
         </nav>

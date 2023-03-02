@@ -8,6 +8,9 @@ import LastUsed from "locize-lastused";
 // const apiKey = "LQyWQlXFALWsD2KTScTa1Q";
 // const loadPath = `https://api.i18nexus.com/project_resources/translations/{{lng}}/{{ns}}.json?api_key=${apiKey}`;
 
+const condition =
+  process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
+
 i18next
   .use(locizePlugin)
   .use(LastUsed)
@@ -15,11 +18,11 @@ i18next
   .use(initReactI18next)
   .use(Backend)
   .init({
-    debug: true,
+    debug: condition ? true : false,
     fallbackLng: "en",
     lng: "en",
     defaultNS: "en",
-    saveMissing: true,
+    saveMissing: condition ? true : false,
 
     backend: {
       projectId: "a6ad41b6-ac0f-4312-9b7a-7dbcd306fa2e",
