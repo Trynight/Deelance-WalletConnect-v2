@@ -31,7 +31,7 @@ import { useWeb3Modal } from "@web3modal/react";
 
 const chains = [arbitrum, mainnet, polygon];
 //console.log(chains[0])
-const PROJECT_ID = "0d9bb517f5e57fb5199a9f7e15c5d93a";
+const PROJECT_ID = "4ff178b5adf37e8779469102693e824b";
 // Wagmi client
 const {provider } = configureChains(chains, [
   walletConnectProvider({ projectId: PROJECT_ID }),
@@ -44,7 +44,7 @@ const wagmiClient = createClient({
   autoConnect: true,
   connectors: modalConnectors({
     projectId: PROJECT_ID,
-    version: "1", // or "2"
+    version: "2", // or "2"
     appName: "web3Modal",
     chains,
   }),

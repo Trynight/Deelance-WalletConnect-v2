@@ -448,9 +448,7 @@ function Presale_main() {
                     </div>
                   ) : (
                     <div className="text-center align-items-center d-flex jsa ">
-                      <a href="/" className="p1-btn" onClick={handleClick}>
-                        {account ? t("Presale") : t("Connect Wallet")}
-                      </a>
+<Web3Button icon={false} />
                     </div>
                   )}
                 </div>
