@@ -1,0 +1,226 @@
+{
+  "about_us": {
+    "about": "About",
+    "button": "---",
+    "description": "Deelance is a freelancing and Recruitment platform based on Web3. Deelance is one such decentralized platform that is redefining how freelancers connect with potential employers and buyers.",
+    "points": [
+      {
+        "description": "World’s first fully decentralized freelance network",
+        "title": "Fully Decentralized"
+      },
+      {
+        "description": "Only 2% Commission lowest In the Industry",
+        "title": "2% Commission"
+      },
+      {
+        "description": "Unlimited ownership Instant Withdrawal recruitment platform",
+        "title": "Instant Withdrawal"
+      }
+    ],
+    "us": "Us"
+  },
+  "buttons": {
+    "buy_now": "Buy Now",
+    "sign_up": "Sign Up"
+  },
+  "find_freelancer": {
+    "button": "Demo",
+    "description_1": "Deelance ” is a project that creates unique contents on Metaverse technology that is a huge trend around the world. Its aim is to move people to another dimension within the digital universe.",
+    "description_2": "Metaverse - where buyers can interact with freelancers in the office space and have a discussion",
+    "metaverse": "Metaverse",
+    "title": "Find Freelancer In"
+  },
+  "footer": {
+    "connect": "Conect With The Community",
+    "copyright": "2022© Deelance Inc.",
+    "links": [
+      "Privacy",
+      "Risk Warning",
+      "Announcements",
+      "Cookie Preferences",
+      "About",
+      "Careers",
+      "Community",
+      "Terms"
+    ],
+    "reserved": "All Rights Reserved",
+    "title": "Deelance is a freelancing and Recruitment platform based on Web3 platform that is redefining how freelancers connect with potential employers and buyers."
+  },
+  "header": {
+    "links": {
+      "about": "About",
+      "about_us_menu": [
+        null,
+        "About",
+        "Team",
+        "Whitepaper"
+      ],
+      "academy": "Academy",
+      "find_job": "Find Job",
+      "home": "Home",
+      "language_menu": {
+        "arabic": "Arabic",
+        "english": "English",
+        "japan": "Japan",
+        "russian": "Russian"
+      },
+      "nft_marketplace": "NFT Marketplace",
+      "win": "Win 100K$"
+    }
+  },
+  "hero": {
+    "hero_details": "Deelance is a freelancing and Recruitment platform based on Web3. Deelance is one such decentralized platform that is redefining how freelancers connect with potential employers and buyers",
+    "title": {
+      "For_Better": "For Better World To",
+      "creating": "Creating",
+      "web3_space": "Web3 Space",
+      "work_together": "Work Together"
+    }
+  },
+  "key_features": {
+    "cards": [
+      {
+        "description": "Post a job or apply for one in a minute.No browser plugins, 3rd party apps, credit card details, or wallet-linking necessary. Fast, efficient & easy the way blockchain is meant to be",
+        "title": "Business Simplified"
+      },
+      {
+        "description": "By implementing an automated dispute system and reputation stored on the blockchain. we’re building a trustworthy platform all stakeholders can rely on.",
+        "title": "Transparency"
+      },
+      {
+        "description": "With escrow, Freelancers have the guarantee of payment for their services, while the Employer’s funds are safe until the Freelancer produces the expected work. As it’s based on smart contracts.",
+        "title": "Escrow"
+      },
+      {
+        "description": "With NFT (NFT) get ownership of the underlying asset or piece of work. NFTs can represent: art, music, photographs, designs, web pages, animations, videos, royalty or copyright of work etc.",
+        "title": "Ownership"
+      },
+      {
+        "description": "Our decentralized and reputation stored on the blockchain. freelance market ecosystem alower fees by directly connecting Employers and Freelancers.",
+        "title": "Low Fees"
+      },
+      {
+        "description": "You can use Crypto get paid for your services quickly and avoid currency exchange and possible commission rates",
+        "title": "Fast Payments"
+      }
+    ],
+    "features": "Features",
+    "key": "Key"
+  },
+  "presale": {
+    "bought": "You Already Bought:",
+    "buy": "How To Buy",
+    "connect": "Connect Wallet",
+    "days": "Days",
+    "hours": "Hours",
+    "live": "Live In",
+    "max": "Max",
+    "min": "Min",
+    "minutes": "Minutes",
+    "official_contract": "Deelance Official Contracts",
+    "presale": "PreSale - Round",
+    "presale_text": "Presale",
+    "progress": "Progress",
+    "seconds": "Seconds"
+  },
+  "roadmap": {
+    "questions": [
+      {
+        "points": [
+          "Initial Project Plan",
+          "Website Design",
+          "Website Live",
+          "Initial Smart-contracts Deployment"
+        ],
+        "subtitle": "(Nov - Dec)",
+        "title": "Q4 2022"
+      },
+      {
+        "points": [
+          "PreSale",
+          "Project Launch",
+          "Marketing",
+          "CMC and CG Listing",
+          "Exchange Listing"
+        ],
+        "subtitle": "(Jan - Mar)",
+        "title": "Q1 2023"
+      },
+      {
+        "points": [
+          "NFT Launch",
+          "NFT Marketplace",
+          "Freelance Platform Development",
+          "Metaverse Development"
+        ],
+        "subtitle": "(March - April)",
+        "title": "Q2 2023"
+      },
+      {
+        "points": [
+          "App Development",
+          "Metaverse Platform Launch",
+          "Platform Improvements"
+        ],
+        "subtitle": "(May - June)",
+        "title": "Q3 2023"
+      }
+    ],
+    "title": "Roadmap"
+  },
+  "tokenomics": {
+    "advisor": "Advisor/Partnership",
+    "button": "Buy Now",
+    "cex": "Cex",
+    "liquidity": "Liquidity",
+    "presale": "Presale",
+    "private": "Private",
+    "reserved": "Reserved/Ecosystem",
+    "rewards": "Rewards / Airdrop",
+    "team": "Team",
+    "title": "Tokenomics"
+  },
+  "warning": "Cryptocurrency may be unregulated in your jurisdiction. The value of cryptocurrencies may go down as well as up. Profits may be subject to capital gains or other taxes applicable in your jurisdiction.",
+  "why_deelance": {
+    "table": [
+      {
+        "title": "Client Fee"
+      },
+      {
+        "title": "Freelancer Fee"
+      },
+      {
+        "crypto": "Crypto/Instant",
+        "currency_conversion": "Currency Conversion",
+        "fee": "Fee For Withdrawal For",
+        "min": "Min Payout",
+        "title": "Withdrawal Fee"
+      },
+      {
+        "title": "Decentralized"
+      },
+      {
+        "title": "Content Ownership"
+      },
+      {
+        "no": "No/Partial",
+        "title": "Efficient Escrow",
+        "yes": "Yes"
+      },
+      {
+        "title": "No Limit On Task Size"
+      },
+      {
+        "title": "Scalable Dispute System"
+      },
+      {
+        "title": "NFT / Metaverse"
+      },
+      {
+        "title": "Staff Recruitment"
+      }
+    ],
+    "title_1": "Why",
+    "title_2": "Deelance"
+  }
+}

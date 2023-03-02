@@ -1,0 +1,196 @@
+.jobs{
+    padding-top: 10%;
+    padding-bottom: 1%;
+}
+.job-head h1{
+   
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+    line-height: 40px;
+
+color: #FFFFFF;
+}
+.job-head{
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+.job-box img{
+    height: auto;
+    width: 199px;
+}
+.job-box p{
+    font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 38px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+.job-box{
+  border-radius: 10px;
+  background: linear-gradient(#111827, #11141a) padding-box, linear-gradient(to top, #ffffff, #111827,transparent);
+  border-bottom: 2px solid #fbfbfb;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  padding: 20px;
+}
+.job-box-2 img{
+    width: auto;
+    height: 151px;
+}
+.job-box-2 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+.job-box-2{
+  border-radius: 10px;
+  background: linear-gradient(#111827, #11141a) padding-box, linear-gradient(to top, #ffffff, #111827,transparent);
+  border-bottom: 2px solid #fbfbfb;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  padding: 20px;
+}
+.job-box-3 img{
+    width: auto;
+    height: 150px;
+}
+.job-box-3 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+.job-box-3{
+  border-radius: 10px;
+  background: linear-gradient(#111827, #11141a) padding-box, linear-gradient(to top, #ffffff, #111827,transparent);
+  border-bottom: 2px solid #fbfbfb;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  padding: 20px;
+}
+.job-box-4 img{
+    width: auto;
+    height: 145px;
+}
+.job-box-4 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+.job-box-4{
+  border-radius: 10px;
+  background: linear-gradient(#111827, #11141a) padding-box, linear-gradient(to top, #ffffff, #111827,transparent);
+  border-bottom: 2px solid #fbfbfb;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  padding: 20px;
+}
+.job-soon{
+    text-align: center;
+    padding-top: 5%;
+}
+
+.job-soon h1{
+    font-style: normal;
+font-weight: 500;
+font-size: 35px;
+line-height: 52px;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+.job-side-1{
+    position: absolute;
+    width: auto;
+    height: auto;
+    right: 0;
+}
+.job-side-2 {
+    position: absolute;
+    width: auto;
+    height: auto;
+   left: 0;
+   margin-top: -26%;
+}
+
+@media (max-width:768px) {
+   
+      .job-head h1 {
+        font-size: 16px;
+        line-height: 29px;
+        font-weight: 500;
+        
+        text-align: center;
+        color: #FFFFFF;
+      }
+      .job-box img{
+        width: 105px;
+      }
+
+      .job-box-2 img {
+        width: auto;
+        height: 81px;
+      }
+      .job-box-3 img {
+        width: auto;
+        height: 104px;
+      }
+      .job-box-2 p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;}
+
+      .job-box p {
+        
+        font-size: 10px;
+      }
+
+      .job-box-3 p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+      }
+      .job-box-4 p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+      }
+      
+      
+      
+      .job-box-4 img {
+        width: auto;
+        height: 106px;
+      }
+      .job-soon h1 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+      }
+
+   
+    
+}

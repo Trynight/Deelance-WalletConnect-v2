@@ -1,0 +1,196 @@
+.road-head h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 138.4%;
+  /* identical to box height, or 208px */
+
+  text-align: center;
+}
+.road-head img {
+  width: auto;
+  height: auto;
+  margin-bottom: 2%;
+}
+.roadmap {
+  padding-top: 2%;
+  padding-bottom: 6rem;
+}
+.box-road-1 {
+  width: 250px;
+  height: auto;
+  /* border: 2px solid red; */
+  color: #fff;
+  position: relative;
+  margin-top: -86px;
+  align-self: flex-start;
+}
+
+.box-road-2 {
+  width: 250px;
+  height: auto;
+  /* border: 2px solid red; */
+  color: #fff;
+  position: relative;
+  margin-top: -114px;
+  align-self: flex-start;
+}
+.box-road-3 {
+  width: 250px;
+  height: auto;
+  /* border: 2px solid red; */
+  color: #fff;
+  position: relative;
+  margin-top: -157px;
+  align-self: flex-start;
+}
+.box-road-4 {
+  width: 250px;
+  height: auto;
+  /* border: 2px solid red; */
+  color: #fff;
+  position: relative;
+  margin-top: -70px;
+  align-self: flex-start;
+  left: 35px;
+}
+
+.box-road-3 h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #00e86d;
+}
+.box-road-3 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #b2b2b2;
+}
+
+.box-road-2 h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #00e86d;
+}
+.box-road-2 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #b2b2b2;
+}
+
+.box-road-4 h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #00e86d;
+}
+.box-road-4 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #b2b2b2;
+}
+
+.box-road-1 h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #00e86d;
+}
+.box-road-1 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #b2b2b2;
+}
+.rd-b {
+  background: #242a38;
+  border-radius: 8px;
+  color: #fff;
+  padding: 4%;
+}
+.rd-b p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  color: #ffffff;
+}
+.rb-img {
+  margin-bottom: 30px;
+}
+.grid-road {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 3rem;
+}
+.mob-road {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .roadmap {
+    padding-bottom: 4rem;
+  }
+
+  .mob-road {
+    display: block;
+  }
+  .grid-road {
+    display: none;
+  }
+  .box-road-1 {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    color: #fff;
+    position: unset;
+    top: -86px;
+  }
+
+  .box-road-2 {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    color: #fff;
+    position: unset;
+    top: -86px;
+  }
+  .box-road-3 {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    color: #fff;
+    position: unset;
+    top: -86px;
+  }
+
+  .box-road-4 {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    color: #fff;
+    position: unset;
+    top: -86px;
+  }
+  .road-slide img {
+    position: relative;
+    top: 44px;
+  }
+  .road-head h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}

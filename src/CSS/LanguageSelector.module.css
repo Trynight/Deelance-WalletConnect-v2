@@ -1,0 +1,66 @@
+.languageDetectorWrapper {
+  position: relative;
+  z-index: 1000000000000000;
+}
+
+.btn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  /* color: var(--green-light); */
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.languageCode {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.btn > *:not(:last-child) {
+  margin-right: 0.6rem;
+}
+
+.dropdown {
+  transform: translateY(-1rem);
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 6rem;
+}
+
+.languageDetectorWrapper:hover .dropdown {
+  opacity: 1;
+  pointer-events: visible;
+  transform: translateY(0);
+}
+
+.dropdownMain {
+  padding: 0.6rem 0;
+  background-color: var(--main-2);
+  border-radius: 0.4rem;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  margin-top: 0.6rem;
+}
+
+.dropdownItem {
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 0.3rem 1rem;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdownItem:hover,
+.dropdownItem.active {
+  background-color: var(--green-light);
+  color: var(--main-2);
+}

@@ -1,0 +1,86 @@
+.pop-cat{
+    padding: 3% 0%;
+  }
+  
+  .pop-cat-head h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 138.4%;
+    padding-bottom: 3%;
+  
+    text-align: center;
+  
+    color: #ffffff;
+  }
+
+  .pop-cat-head span{
+    color:#00a652;
+  }
+
+  .margin-top-bottom-10px{
+    margin: 5% 0;
+  }  
+  
+  .green {
+    color: #00a652;
+    font-weight: 700;
+  }
+  .border-green{
+    padding-bottom: 5%;
+  }
+  .border-green-2{
+    padding-top: 10%;
+  }
+
+  .pop-cat-grid-container{
+    display:grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap:30px;
+  }
+
+  .pop-cat-nft-box{  
+    border-radius: 10px;
+    background:linear-gradient(#111827, #111827) padding-box,
+    linear-gradient(to top,  #ffffff,  #000000,transparent);
+   
+    border-bottom: 2px solid #ffffff ;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    padding: 20px;
+  }
+
+  
+  .pop-cat-nft-text{
+    text-align: center;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 11px;
+    padding-top: 12%;
+  }
+
+  .pop-cat-nft-img{
+    font-size: 50px;
+    text-align: center;
+    color: #00a652;
+    padding: 10px;
+  }
+  .pop-cat-nft-img img {
+    width: 55px;
+    height: auto;
+  }
+
+  @media (max-width:768px) {
+    .pop-cat-grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 30px;
+    }
+
+    .pop-cat-head h1 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 26px;
+    }
+    
+  }

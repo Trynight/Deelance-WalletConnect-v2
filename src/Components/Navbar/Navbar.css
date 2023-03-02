@@ -1,0 +1,249 @@
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+.logo img {
+  height: 40px;
+}
+a:hover {
+  color: #00e86d;
+}
+.logo {
+  align-items: center;
+}
+
+/* 
+   
+  
+  /* navbar style start  */
+
+.main-nav {
+  width: 100%;
+  background-color: #111827;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5%;
+}
+
+.logo {
+  display: grid;
+  /* background-color: #3b5998; */
+  grid-column: 2/3;
+  justify-content: start;
+  align-items: center;
+}
+
+.menu-link {
+  grid-column: 3/4;
+  padding-top: 0.5%;
+}
+
+.menu-link ul {
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.9rem;
+}
+
+.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 7;
+  margin-left: 0%;
+  background: rgba(255, 255, 255, 0);
+  padding-left: 0%;
+  padding-bottom: 1%;
+  padding-right: 6%;
+  z-index: 1;
+}
+.dropdown-active {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 7%;
+  margin-left: 0%;
+  background: rgba(255, 255, 255, 0);
+  padding-left: 0%;
+  padding-bottom: 1%;
+  padding-right: 6%;
+  z-index: 1;
+}
+
+.explore-btn {
+  padding: 8px !important;
+  background: transparent;
+  border: 0.5px solid #ffffff;
+  box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+.explore-btn:hover {
+  background-color: #00a652;
+  border: 0.5px solid #006a34;
+}
+
+/* ----------- Grid part ends ----------------- */
+
+.menu-link ul li {
+  font-size: 1.3rem;
+}
+
+.menu-link ul li a,
+.menu-link ul li .a-link {
+  transition: 0.5s;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 109%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.menu-link ul li:hover > a,
+.menu-link ul li:hover > .a-link {
+  transform-origin: left;
+  color: #00e86d;
+  text-decoration: wavy;
+  transition: 0.5s;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.-navbar-mobile-header {
+  margin-bottom: 1.6rem;
+}
+
+.-navbar-lang-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.-navbar-close-btn {
+  display: flex;
+  color: white;
+  background-color: transparent;
+  font-size: 1.4rem;
+  border: none;
+}
+
+.-navbar-mobile-logo {
+  width: 100%;
+  margin-bottom: 1.4rem;
+}
+
+/* responsive css style */
+
+/* responsive css style  */
+@media (max-width: 1080px) {
+  .main-nav {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-link {
+    display: none;
+  }
+
+  .logo img {
+    height: 2rem;
+  }
+
+  .logo {
+    height: auto !important;
+    position: relative;
+    bottom: 0.26rem;
+  }
+
+  .mobile-menu-link {
+    display: block;
+    overflow-y: auto;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 120;
+    height: 100vh;
+    width: 260px;
+
+    background-color: var(--main-2);
+    padding: 2rem 3rem;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+      rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+
+    transition: all 0.3s ease;
+    transform: translateX(260px);
+  }
+
+  .mobile-menu-link.open {
+    transform: translateX(0px);
+  }
+
+  .mobile-menu-link ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    height: auto !important;
+  }
+
+  .mobile-menu-link ul > *:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
+
+  .mobile-menu-link ul li:first-child {
+    transition-delay: 0.2s;
+  }
+
+  .hamburger-menu {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  .dropdown-active {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    top: 0%;
+    margin-left: 0%;
+    background: rgba(255, 255, 255, 0);
+    padding-left: 0%;
+    padding-bottom: 1%;
+    padding-right: 6%;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    height: 5.6rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    font-size: 1.4rem;
+  }
+
+  .hamburger-menu a {
+    display: flex;
+  }
+}
+
+@media (max-width: 520px) {
+}

@@ -1,0 +1,38 @@
+.navbarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarLogo {
+  display: block;
+  width: fit-content;
+}
+.navbarLogo img {
+  height: 3rem;
+  display: block;
+}
+
+.linkList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.linkList > *:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.dropdown {
+  display: none;
+}
+
+.link {
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.link:hover {
+  color: var(--green-light);
+}

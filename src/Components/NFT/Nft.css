@@ -1,0 +1,155 @@
+.hero-nft{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+.hero-nft h1{
+  font-style: normal;
+font-weight: 500;
+font-size: 65px;
+line-height: 110.9%;
+/* or 72px */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+.hero-nft h6{
+  font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 133.4%;
+/* or 29px */
+
+
+color: #FFFFFF;
+padding-bottom: 6%;
+}
+
+.hero {
+    padding-top: 11%;
+   height: 100vh;
+  }
+  .hero-img {
+    height: 355px;
+    width: auto;
+  
+  }
+  .hero h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 58px;
+    line-height: 138.4%;
+    /* or 104px */
+  
+    color: #000000;
+  }
+  .hero-sp-p{
+    font-size: 21px;
+      font-weight: 600;
+  }
+  .social-hero{
+    gap: 1rem;
+    padding-bottom: 2%;
+  }
+  .social-hero a{
+    font-size: 26px;
+  }
+  .green {
+    color: #00a652 !important;
+    font-weight: 700;
+  }
+  .nft-hero-btn {
+    padding-top: 0%;
+  }
+  
+  .nft-hero-btn-1 {
+    background: transparent;
+    border: 0.5px solid #ffffff;
+    box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
+    border-radius:  8px;
+    padding: 1% 7%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 5%;
+  }
+  .nft-hero-btn-2 {
+    border: 0.5px solid #006a34;
+    filter: drop-shadow(0px 7px 16px rgba(0, 0, 0, 0.4));
+    border-radius: 33.5px 0px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    color: #00a652;
+    padding: 1% 7%;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .side-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 409px;
+    height: 246px;
+    background: #00a652;
+    filter: blur(180px);
+    z-index: -20;
+  }
+  
+  .side-2 {
+    position: absolute;
+    left: 0;
+    width: 409px;
+    height: 246px;
+    background: #00a652;
+    filter: blur(180px);
+    z-index: -20;
+  }
+  @media (max-width:768px) {
+    .hero h1{
+      font-size: 26px;
+    }
+    .hero-img{
+      height: 260px;
+    }
+    .side-1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 253px;
+      height: 194px;
+    }
+    .side-2 {
+      display: none;
+    }
+    .hero-sp-p{
+      font-size: 14px;
+        font-weight: 600;
+    }
+    .social-hero a{
+      font-size: 14px;
+    }
+    .hero {
+      padding-top: 11%;
+      height: 62vh;
+  }
+  .hero-nft h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+  }
+  .hero-nft h6 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .nft-hero-btn-1 {
+   
+    font-size: 11px;
+  }
+  .nft-hero-btn-2{
+    font-size: 11px;
+  }
+
+
+
+  }

@@ -1,0 +1,41 @@
+.seen-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-bottom: 40px; */
+}
+
+.seen-grid h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: -5px;
+}
+.seen-grid img {
+  width: auto;
+  display: block;
+  margin: 0 1rem;
+
+  /* flex: 1; */
+}
+
+.mint {
+  height: 24px !important;
+}
+.krypto {
+  height: 20px !important;
+}
+
+.crypto {
+  height: 23px !important;
+}
+
+@media (max-width: 768px) {
+  .seen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+  }
+}

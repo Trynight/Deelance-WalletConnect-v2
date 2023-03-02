@@ -1,0 +1,61 @@
+.nft-partners{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  }
+  
+  .part-img-box{
+      text-align: center;
+  }
+  
+  .fox{
+      width: auto;
+      height: 120px;
+  }
+  .insider{
+      height: 120px;
+      width: auto;
+  }
+  .enter{
+      width: auto;
+      height: 120px;
+  }
+  .part-head h1{
+      font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 138.4%;
+  /* identical to box height, or 208px */
+  
+  text-align: center;
+  
+  color: #0000008f;
+  }
+
+  .partner-box{        
+    border: 3px solid #00a652;
+    border-color: linear-gradient(#2BFF47 100%,   #F1FF05 100%,   #10FF50 100%);
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  
+  @media (max-width:768px) {
+      .fox {
+          width: auto;
+          height: 96px;
+      }
+      .insider {
+          height: 96px;
+          width: auto;
+      }
+      .enter{
+          height: 96px;
+      }
+      .part-head h1 {
+          font-style: normal;
+          font-weight: 800;
+          font-size: 42px;}
+  }
+

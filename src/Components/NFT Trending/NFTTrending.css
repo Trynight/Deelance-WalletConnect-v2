@@ -1,0 +1,118 @@
+.nft-trending{
+    padding: 3% 0%;
+  }
+  
+  .nft-trending-head h1 {
+    ont-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 138.4%;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 2%;
+  }
+
+  .top-seller-head span{
+    color:#00a652;
+  }
+
+  .top-seller-img-box{
+    position: relative;
+    border: 2px solid #00a652;
+    border-radius: 10px;
+    min-height: 30px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .top-seller-img-box span{
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 39px;
+  }
+
+.trending-nft-text-wrap{
+  padding-top: 2%;
+  color: #ffffff;
+}
+
+  .margin-top-bottom-10px{
+    margin: 5% 0;
+  }
+  
+  .green {
+    color: #00a652;
+    font-weight: 700;
+  }
+
+  .trending-nft-grid-container{
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap:30px;
+  }
+
+  .trending-nft-outerbox{  
+    border-radius: 10px;  
+    
+    background:linear-gradient(#111827, #111827) padding-box,
+    linear-gradient(to top,  #ffffff,  #000000,transparent);
+    
+    border: 3px solid transparent;
+    padding: 20px 50px;
+  }
+
+ .trending-nft-box{    
+    font-size: 12px;
+    font-weight: 600;   
+  }
+
+
+  .trending-nf-img-green {
+    padding: 10px 5px;
+    border-radius: 5px;
+    min-height: 200px;
+    background: linear-gradient(to top,  #10FF50,  transparent);      
+  }
+
+  .trending-nf-img-yellow {
+    padding: 10px 5px;
+    border-radius: 5px;
+    min-height: 200px;
+    background: linear-gradient(to top,  #F1FF05,  transparent);    
+  }
+
+  .trending-nf-img img{
+    box-shadow: 2px 2px 2px rgb(72, 72, 72); 
+  }
+
+  .trending-nft-text-wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width:768px) {
+    .nft-trending-head h1 {
+    
+      font-weight: 800;
+      font-size: 33px;
+    }
+    .trending-nft-grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .trending-nf-img-green {
+      padding: 8px 5px;
+      min-height: 88px;
+    }
+    .trending-nf-img-yellow {
+      padding: 8px 5px;
+      min-height: 88px;
+    }
+    .trending-nft-box {
+      font-size: 7px;
+      font-weight: 600;
+    }
+    
+  }

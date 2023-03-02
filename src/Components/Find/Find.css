@@ -1,0 +1,60 @@
+.find{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.meta-1 h1{
+    color: #fff;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 50px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap');
+.meta-1 p{
+    font-family: 'Mulish', sans-serif;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 2% 0%;
+    line-height: 28px;
+}
+
+.gp-2{
+    margin-top: 38px;
+}
+.bg-dework{
+    background: #242A38;
+
+ 
+}
+.demo-btn{
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 2% 8%;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 2%;
+}
+
+.demo-btn:hover{
+    background-color: #00e86d;
+    color: #fff;
+}
+
+
+
+@media (max-width:768px) {
+   
+    .meta-1 h1 {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .meta-1 p {
+        font-family: 'Mulish', sans-serif;
+        color: #fff;
+        font-size: 16px;
+    }
+ 
+
+    
+}

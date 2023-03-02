@@ -1,0 +1,145 @@
+.features {
+  padding-bottom: 5%;
+}
+.feat-header {
+  padding-bottom: 3%;
+}
+.feat-header img {
+  width: auto;
+  height: auto;
+}
+.feat-header h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 138.4%;
+  text-align: center;
+  color: #ffffff;
+  transition: ea;
+}
+
+.feat-img {
+  text-align: center;
+}
+.feat-img img {
+  height: auto;
+  width: auto;
+}
+
+.feat-box {
+  --radius: 8px;
+
+  background: transparent;
+  border-radius: var(--radius);
+  width: auto;
+  margin: 5%;
+  padding-top: 8%;
+  padding-bottom: 2%;
+  height: 275px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+.feat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+  background: #050828;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform: scale(0.5);
+  opacity: 0;
+  transition-delay: 0.1s;
+  z-index: -1;
+}
+.feat-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+  background: #242a38;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: -2;
+}
+
+.feat-box:hover::after {
+  transform: scale(1.07);
+}
+.feat-box:hover::before {
+  opacity: 1;
+  transform: scale(1.07);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.feat-box h3 {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  line-height: 30px;
+  padding-top: 3%;
+  padding-bottom: 1%;
+  text-transform: capitalize;
+}
+
+.feat-box p {
+  /* font-family: auto; */
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 24px;
+
+  color: #ffffff;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.black {
+  color: #000000;
+  font-weight: 500;
+}
+
+.feat-side {
+  position: absolute;
+  height: 51px;
+  width: auto;
+  left: 34%;
+  margin-top: 11px;
+}
+.mtf-60 {
+  margin-top: 20px;
+  padding-bottom: 3%;
+}
+.mob-feat {
+  display: none;
+}
+@media (max-width: 768px) {
+  .desktop-feat {
+    display: none;
+  }
+  .mob-feat {
+    display: block;
+  }
+  .feat-header h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+  }
+
+  .feat-side {
+    position: absolute;
+    height: 44px;
+    width: auto;
+    left: 15%;
+    margin-top: 11px;
+    z-index: -3;
+  }
+  .feat-box {
+    margin-bottom: 4%;
+  }
+}

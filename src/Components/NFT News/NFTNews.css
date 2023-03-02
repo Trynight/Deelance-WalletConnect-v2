@@ -1,0 +1,71 @@
+.nft-news{
+    padding: 3% 0%;
+  }
+  
+  .nft-news-head h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 138.4%;
+    /* identical to box height, or 208px */
+  
+    text-align: center;
+  
+    color: #0000008f;
+  }
+
+  .nft-news-head span{
+    color:#00a652;
+  }
+
+  .nft-news-grid-container{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap:30px;
+  }
+
+  .news-nft-box{
+    background: linear-gradient(to top, transparent, #00a652, transparent);
+  }
+
+  .news-nft-box img{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  .nft-news-test-wrapper{
+    padding: 15px;
+  }
+
+  .nft-news-text-date{
+    font-size: 12px;
+    color: white;
+  }
+
+  .nft-news-text-head{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-top: 5px;
+  }
+
+  .nft-news-text-cont{
+    font-size: 14px;
+    color: #212121;
+    margin-top: 5px;
+  }
+
+  
+  .margin-top-bottom-10px{
+    margin: 5% 0;
+  }
+  
+
+  .green {
+    color: #00a652;
+    font-weight: 700;
+  }
+
+
+  
