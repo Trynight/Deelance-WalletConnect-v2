@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import Fire from "../../assets/fire.webp";
 import Bullet from "../../assets/de.webp";
+import { Web3Button } from "@web3modal/react";
 
 const MySwal = withReactContent(Swal);
 
