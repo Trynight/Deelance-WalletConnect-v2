@@ -75,7 +75,7 @@ function App() {
       contracts[token] = new ethers.Contract(
         address,
         token === "Main" ? BigNFTABI : BEP20ABI,
-        provider.getSigner()
+        provider
       );
     }
     setContracts(contracts);
