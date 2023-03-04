@@ -10,7 +10,7 @@ import {
   WagmiConfig,
 } from "wagmi";
 
-import { arbitrum, mainnet, polygon, bsc} from "wagmi/chains";
+import { mainnet} from "wagmi/chains";
 import { Web3Modal } from "@web3modal/react";
 import {
   EthereumClient,
@@ -21,7 +21,7 @@ import {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-const chains = [bsc];
+const chains = [mainnet];
 //console.log(chains[0])
 const PROJECT_ID = "4ff178b5adf37e8779469102693e824b";
 // Wagmi client
