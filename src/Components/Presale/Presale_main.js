@@ -428,7 +428,12 @@ function Presale_main() {
                   ) : (
                     <div></div>
                   )}
-
+                   <form>
+                      <div className="pre-head-2">
+                        <h2>{t("presale.bought")}</h2>
+                        <span>{deelance} $Dlance</span>
+                      </div>
+                    </form>
                   {account ? (
                     <div className="text-center align-items-center d-flex jsa ">
                       <a href="/" className="p1-btn" onClick={handleModal}>
