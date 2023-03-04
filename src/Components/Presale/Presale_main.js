@@ -13,6 +13,7 @@ import Fire from "../../assets/fire.webp";
 import Bullet from "../../assets/de.webp";
 import { Web3Button } from "@web3modal/react";
 import ConnectWalletBtn from "Components/ConnectWalletBtn";
+import PresaleRemainingTimer from "Components/PresaleRemainingTimer";
 
 const MySwal = withReactContent(Swal);
 
@@ -38,12 +39,12 @@ function Presale_main() {
   const [aa, setNetwork] = useState();
   const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
-  const [countdown, setCountdown] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  // const [countdown, setCountdown] = useState({
+  //   days: 0,
+  //   hours: 0,
+  //   minutes: 0,
+  //   seconds: 0,
+  // });
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -87,22 +88,24 @@ function Presale_main() {
       });
       setTotal("0");
       setPercantage("0");
-      const intervalId = setInterval(() => {
-        const date = new Date();
-        const futureDate = new Date("2023-04-03T00:00:00");
-        const difference = futureDate - date;
 
-        if (difference >= 0) {
-          setCountdown({
-            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-            minutes: Math.floor((difference / (1000 * 60)) % 60),
-            seconds: Math.floor((difference / 1000) % 60),
-          });
-        } else {
-          clearInterval(intervalId);
-        }
-      }, 1000);
+      // const intervalId = setInterval(() => {
+      //   const date = new Date();
+      //   const futureDate = new Date("2023-04-03T00:00:00");
+      //   const difference = futureDate - date;
+
+      //   if (difference >= 0) {
+      //     setCountdown({
+      //       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      //       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      //       minutes: Math.floor((difference / (1000 * 60)) % 60),
+      //       seconds: Math.floor((difference / 1000) % 60),
+      //     });
+      //   } else {
+      //     clearInterval(intervalId);
+      //   }
+      // }, 1000);
+
       const getPr = async () => {
         const pri = await contracts.Main.salePrice();
         const myString = ethers.utils.formatEther(pri);
@@ -120,22 +123,22 @@ function Presale_main() {
       };
       getPr();
     } else {
-      const intervalId = setInterval(() => {
-        const date = new Date();
-        const futureDate = new Date("2023-04-03T00:00:00");
-        const difference = futureDate - date;
+      // const intervalId = setInterval(() => {
+      //   const date = new Date();
+      //   const futureDate = new Date("2023-04-03T00:00:00");
+      //   const difference = futureDate - date;
 
-        if (difference >= 0) {
-          setCountdown({
-            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-            minutes: Math.floor((difference / (1000 * 60)) % 60),
-            seconds: Math.floor((difference / 1000) % 60),
-          });
-        } else {
-          clearInterval(intervalId);
-        }
-      }, 1000);
+      //   if (difference >= 0) {
+      //     setCountdown({
+      //       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      //       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      //       minutes: Math.floor((difference / (1000 * 60)) % 60),
+      //       seconds: Math.floor((difference / 1000) % 60),
+      //     });
+      //   } else {
+      //     clearInterval(intervalId);
+      //   }
+      // }, 1000);
 
       const getETHBalance = async () => {
         const balance = await provider.getBalance(account);
@@ -347,6 +350,7 @@ function Presale_main() {
     e.preventDefault();
     setIsModal2(true);
   };
+
   return (
     <>
       <section className="main-page">
@@ -479,13 +483,18 @@ function Presale_main() {
                   </span>
                 </p>
               </div>
-              <p className="white count-down text-center mb-0">
+              {/* <p className="white count-down text-center mb-0">
                 <span className="green">{countdown.days}</span> DAYS,{" "}
                 <span className="green">{countdown.hours}</span> HOURS,{" "}
                 <span className="green">{countdown.minutes}</span> MINUTES,{" "}
                 <span className="green">{countdown.seconds}</span> SECONDS
                 Remaining
-              </p>
+              </p> */}
+
+              <PresaleRemainingTimer
+                somestate={somestate}
+                setSomeState={setSomeState}
+              />
             </div>
           </div>
         </div>
