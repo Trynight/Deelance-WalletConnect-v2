@@ -11,7 +11,6 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import Fire from "../../assets/fire.webp";
 import Bullet from "../../assets/de.webp";
-import { Web3Button } from "@web3modal/react";
 import ConnectWalletBtn from "Components/ConnectWalletBtn";
 import PresaleRemainingTimer from "Components/PresaleRemainingTimer";
 
@@ -23,7 +22,7 @@ function Presale_main() {
   const [showComp, setShowComp] = useState(false);
   const [isModal, setIsModal] = useState(false);
   const [isModal2, setIsModal2] = useState(false);
-  const { connectWallet, disconnectWallet, provider, contracts, account } =
+  const { connectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [balances, setBalances] = useState({ ETH: 0 });
   const tokenElement = useRef();
@@ -46,37 +45,37 @@ function Presale_main() {
   //   seconds: 0,
   // });
 
-  const handleClick = async (e) => {
-    e.preventDefault();
-    const providera = new ethers.providers.Web3Provider(window.ethereum);
-    const networka = await providera.getNetwork();
-    console.log("CIAOOO", networka.chainId);
-    if (networka.chainId !== 1) {
-      alert("Sorry wrong ChainID, switch to ETH chain!");
-      return false;
-    } else {
-      if (account) {
-        setClaimDisabled(true);
-        setShowComp(!showComp);
-        setAlertShown(true);
-        setSomeState(!somestate);
-      } else {
-        try {
-          const success = await connectWallet();
-          if (success) {
-            setClaimDisabled(true);
-            setShowComp(!showComp);
-            setAlertShown(true);
-            setSomeState(!somestate);
-          }
-        } catch (error) {
-          console.error(error);
-          alert("Something wrong, did you have any wallet?", error);
-          return;
-        }
-      }
-    }
-  };
+  // const handleClick = async (e) => {
+  //   e.preventDefault();
+  //   const providera = new ethers.providers.Web3Provider(window.ethereum);
+  //   const networka = await providera.getNetwork();
+  //   console.log("CIAOOO", networka.chainId);
+  //   if (networka.chainId !== 1) {
+  //     alert("Sorry wrong ChainID, switch to ETH chain!");
+  //     return false;
+  //   } else {
+  //     if (account) {
+  //       setClaimDisabled(true);
+  //       setShowComp(!showComp);
+  //       setAlertShown(true);
+  //       setSomeState(!somestate);
+  //     } else {
+  //       try {
+  //         const success = await connectWallet();
+  //         if (success) {
+  //           setClaimDisabled(true);
+  //           setShowComp(!showComp);
+  //           setAlertShown(true);
+  //           setSomeState(!somestate);
+  //         }
+  //       } catch (error) {
+  //         console.error(error);
+  //         alert("Something wrong, did you have any wallet?", error);
+  //         return;
+  //       }
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     if (!account) {
@@ -210,6 +209,7 @@ function Presale_main() {
         }
         setBalances(balances);
       };
+
       getAllBalances();
       getSaleProgress();
       getDeelance();
@@ -219,71 +219,71 @@ function Presale_main() {
     }
   }, [account, somestate]);
 
-  const buyNFT = async (e) => {
-    e.preventDefault();
+  // const buyNFT = async (e) => {
+  //   e.preventDefault();
 
-    if (!account) {
-      return;
-    }
+  //   if (!account) {
+  //     return;
+  //   }
 
-    const token = tokenElement.current.value;
-    const nftAmount = nftAmountElement.current.value;
+  //   const token = tokenElement.current.value;
+  //   const nftAmount = nftAmountElement.current.value;
 
-    try {
-      const gasPrice = "12";
-      let transaction = null;
-      if (nftAmount < 60) {
-        alert("Please insert more than 60 $Deelance to buy!");
-        return;
-      }
-      if (token == "ETH") {
-        const ETHAmount = await contracts.Main.getETHAmount(
-          ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
-        );
-        console.log(ETHAmount.toString());
-        transaction = await contracts.Main.buyWithETH(nftAmount, {
-          gasLimit: 130055,
-          gasPrice: ethers.utils.parseUnits(gasPrice, "gwei"),
-          value: ETHAmount.toString(),
-        });
-      } else {
-        const tokenAmount = await contracts.Main.getTokenAmount(
-          nftAmount.toString(),
-          0
-        );
-        const b = parseInt(
-          await contracts["USDT"].allowance(account, contracts.Main.address),
-          10
-        );
+  //   try {
+  //     const gasPrice = "12";
+  //     let transaction = null;
+  //     if (nftAmount < 60) {
+  //       alert("Please insert more than 60 $Deelance to buy!");
+  //       return;
+  //     }
+  //     if (token == "ETH") {
+  //       const ETHAmount = await contracts.Main.getETHAmount(
+  //         ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
+  //       );
+  //       console.log(ETHAmount.toString());
+  //       transaction = await contracts.Main.buyWithETH(nftAmount, {
+  //         gasLimit: 130055,
+  //         gasPrice: ethers.utils.parseUnits(gasPrice, "gwei"),
+  //         value: ETHAmount.toString(),
+  //       });
+  //     } else {
+  //       const tokenAmount = await contracts.Main.getTokenAmount(
+  //         nftAmount.toString(),
+  //         0
+  //       );
+  //       const b = parseInt(
+  //         await contracts["USDT"].allowance(account, contracts.Main.address),
+  //         10
+  //       );
 
-        if (b <= 0) {
-          console.log("sono qui");
-          await contracts["USDT"].approve(
-            contracts.Main.address,
-            "10000000000000000000000000000000000000000000000000000000000"
-          );
-        } else {
-          console.log("SIIII", nftAmount.toString());
-          transaction = await contracts.Main.buyWithUSD(
-            nftAmount.toString(),
-            0
-          );
-        }
-      }
-      const tx_result = await transaction.wait();
-      alert(`Successfully bought domain. TX: ${tx_result.transactionHash}`);
-      console.log("somestate", somestate);
-      setSomeState(!somestate);
-      console.log("transaction", tx_result.transactionHash);
-    } catch (error) {
-      alert(
-        "Error occured during transaction. Please check the browser console.\n" +
-          error.reason
-      );
-      setSomeState(!somestate);
-      console.error("Transaction Error:", error.reason);
-    }
-  };
+  //       if (b <= 0) {
+  //         console.log("sono qui");
+  //         await contracts["USDT"].approve(
+  //           contracts.Main.address,
+  //           "10000000000000000000000000000000000000000000000000000000000"
+  //         );
+  //       } else {
+  //         console.log("SIIII", nftAmount.toString());
+  //         transaction = await contracts.Main.buyWithUSD(
+  //           nftAmount.toString(),
+  //           0
+  //         );
+  //       }
+  //     }
+  //     const tx_result = await transaction.wait();
+  //     alert(`Successfully bought domain. TX: ${tx_result.transactionHash}`);
+  //     console.log("somestate", somestate);
+  //     setSomeState(!somestate);
+  //     console.log("transaction", tx_result.transactionHash);
+  //   } catch (error) {
+  //     alert(
+  //       "Error occured during transaction. Please check the browser console.\n" +
+  //         error.reason
+  //     );
+  //     setSomeState(!somestate);
+  //     console.error("Transaction Error:", error.reason);
+  //   }
+  // };
 
   const claimNFT = async (e) => {
     e.preventDefault();
@@ -350,6 +350,8 @@ function Presale_main() {
     e.preventDefault();
     setIsModal2(true);
   };
+
+  console.log("re-rendered");
 
   return (
     <>
