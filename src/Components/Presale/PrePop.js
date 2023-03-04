@@ -18,6 +18,7 @@ function PrePop({ setIsModal }) {
   const maxa = useRef();
   const [secondInputValue, setSecondInputValue] = useState(0);
   const [thirdInputValue, setThirdInputValue] = useState(0);
+
   const handleClick = async (e) => {
     e.preventDefault();
     if (!account) {
@@ -29,6 +30,7 @@ function PrePop({ setIsModal }) {
     setShowComp(!showComp);
     setSomeState(!somestate);
   };
+
   useEffect(() => {
     if (!account) {
       setBalances({
