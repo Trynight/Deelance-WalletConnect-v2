@@ -17,8 +17,8 @@ const data = [
   {
     img: Trans,
   },
-  { img: Escrow },
   { img: Owner },
+  { img: Escrow },
   { img: Dollar },
   { img: Pay },
 ];

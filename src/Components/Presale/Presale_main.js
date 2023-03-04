@@ -419,23 +419,20 @@ function Presale_main() {
                   </div>
 
                   {showComp ? (
-                    <form>
-                      <div className="pre-head-2">
-                        <h2>{t("presale.bought")}</h2>
-                        <span>{deelance} $Dlance</span>
-                      </div>
-                    </form>
+                    <div className="pre-head-2 ">
+                      <h2>{t("presale.bought")}</h2>
+                      <span>{deelance} $Dlance</span>
+                    </div>
                   ) : (
                     <div></div>
                   )}
-                   <form>
-                      <div className="pre-head-2">
-                        <h2>{t("presale.bought")}</h2>
-                        <span>{deelance} $Dlance</span>
-                      </div>
-                    </form>
+                  <div className="pre-head-2">
+                    <h2 className="mb-0">
+                      {t("Your Balance")} {deelance} $Dlance
+                    </h2>
+                  </div>
                   {account ? (
-                    <div className="text-center align-items-center d-flex jsa ">
+                    <div className="presale-buttons">
                       <a href="/" className="p1-btn" onClick={handleModal}>
                         Buy Now
                       </a>

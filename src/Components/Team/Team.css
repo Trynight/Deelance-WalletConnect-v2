@@ -6,7 +6,7 @@
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 50px;
+  gap: 2.4rem;
 }
 .team-box {
   border: 1px solid #ffffff;
@@ -14,11 +14,15 @@
   border-radius: 8px;
   padding: 5%;
   height: 100%;
+  position: relative;
 }
 .box-img img {
   width: 150px;
   height: 150px;
   border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
 }
 .box-img h2 {
   font-style: normal;
@@ -48,9 +52,9 @@
   color: #ffffff;
 }
 .linked {
-  position: relative;
-  left: 97%;
-  top: -5%;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   font-size: 25px;
   width: fit-content;
 }
@@ -60,6 +64,7 @@
 }
 .linked-in {
   color: #00a652;
+  display: flex;
 }
 .linked-in:hover {
   color: #0e76a8;
@@ -99,6 +104,14 @@
   height: 226px;
   left: 35px;
   margin-top: -18%;
+}
+
+@media (max-width: 1080px) {
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
 }
 
 @media (max-width: 768px) {
