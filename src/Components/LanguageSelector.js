@@ -34,8 +34,6 @@ function LanguageSelector() {
     setLangCode(i18n?.language);
   }, [i18n?.language]);
 
-  console.log(i18n?.language);
-
   return (
     <div className={styles.languageDetectorWrapper}>
       <button className={styles.btn}>
