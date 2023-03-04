@@ -19,74 +19,50 @@ import UserContext from "./UserContext";
 import "./App.css";
 import { Circles } from "react-loader-spinner";
 import {
-  EthereumClient,
-  modalConnectors,
-  walletConnectProvider,
-} from "@web3modal/ethereum";
-import { Web3Modal } from "@web3modal/react";
-import {
-  configureChains,
-  createClient,
-  WagmiConfig,
   useProvider,
   useAccount,
+  useSigner
 } from "wagmi";
-import { arbitrum, mainnet, polygon } from "wagmi/chains";
 import { useWeb3Modal } from "@web3modal/react";
-
-const chains = [mainnet];
-//console.log(chains[0])
-const PROJECT_ID = "4ff178b5adf37e8779469102693e824b";
-// Wagmi client
-const { provider } = configureChains(chains, [
-  walletConnectProvider({ projectId: PROJECT_ID }),
-]);
-
-//console.log("provider", provider)
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors: modalConnectors({
-    projectId: PROJECT_ID,
-    version: "2", // or "2"
-    appName: "web3Modal",
-    chains,
-  }),
-  provider,
-});
-
-// Web3Modal Ethereum Client
-const ethereumClient = new EthereumClient(wagmiClient, chains);
 
 function App() {
   const { open } = useWeb3Modal();
   const [loading, setLoading] = useState(true);
   const defaultProvider = new ethers.providers.JsonRpcProvider(RPCUrl);
+  const { data: signer, isError, isLoading } = useSigner()
 
   const [provider, setProvider] = useState(defaultProvider);
-  const myProvider = useProvider();
   const { address: account } = useAccount();
   const [contracts, setContracts] = useState({});
+  const myProvider = useProvider();
 
   useEffect(() => {
-    if (!account) return;
+    if (!signer?.provider) return;
     const contracts = {};
 
     for (const [token, address] of Object.entries(ContractAddr)) {
       contracts[token] = new ethers.Contract(
         address,
         token === "Main" ? BigNFTABI : BEP20ABI,
-        provider
+        signer
       );
     }
     setContracts(contracts);
     setProvider(myProvider);
-  }, [account]);
+  }, [signer]);
 
+  if (account) {
   contracts.Main = new ethers.Contract(
     ContractAddr.Main,
     BigNFTABI,
-    defaultProvider
-  );
+    signer
+  ); } else {
+    contracts.Main = new ethers.Contract(
+      ContractAddr.Main,
+      BigNFTABI,
+      defaultProvider
+    ); 
+  }
 
   useEffect(() => {
     setLoading(false);
@@ -128,7 +104,6 @@ function App() {
           </Routes>
         </Router>
       </UserContext.Provider>
-      <Web3Modal projectId={PROJECT_ID} ethereumClient={ethereumClient} />
     </>
   );
 }
