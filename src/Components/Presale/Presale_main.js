@@ -432,19 +432,21 @@ function Presale_main() {
                   ) : (
                     <div></div>
                   )}
-                  <div className="pre-head-2">
-                    <h2 className="mb-0">
-                      {t("Your Balance")} {deelance} $Dlance
-                    </h2>
-                  </div>
+                  {account && (
+                    <div className="pre-head-2">
+                      <h2 className="mb-0">
+                        {t("Your Balance")} {deelance} $Dlance
+                      </h2>
+                    </div>
+                  )}
                   {account ? (
                     <div className="presale-buttons">
                       <a href="/" className="p1-btn" onClick={handleModal}>
-                        Buy Now
+                        {t("Buy Now")}
                       </a>
 
                       <a href="/" className="p1-btn" onClick={buyCard}>
-                        Buy with Card
+                        {t("Buy with Card")}
                       </a>
 
                       <a
@@ -453,7 +455,7 @@ function Presale_main() {
                         onClick={claimNFT}
                         disabled={claimDisabled ? true : false}
                       >
-                        Claim
+                        {t("Claim")}
                       </a>
                     </div>
                   ) : (
