@@ -82,7 +82,7 @@ function App() {
         }}
       >
         {/* <Router basename="/Deelance-WalletConnect-v2"> */}
-        <Router basename="/Deelance-WalletConnect-v2">
+        <Router>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/nft-market" element={<NftMarket />} />
