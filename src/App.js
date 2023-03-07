@@ -18,18 +18,14 @@ import { ContractAddr, RPCUrl } from "./Constants/Constants";
 import UserContext from "./UserContext";
 import "./App.css";
 import { Circles } from "react-loader-spinner";
-import {
-  useProvider,
-  useAccount,
-  useSigner
-} from "wagmi";
+import { useProvider, useAccount, useSigner } from "wagmi";
 import { useWeb3Modal } from "@web3modal/react";
 
 function App() {
   const { open } = useWeb3Modal();
   const [loading, setLoading] = useState(true);
   const defaultProvider = new ethers.providers.JsonRpcProvider(RPCUrl);
-  const { data: signer, isError, isLoading } = useSigner()
+  const { data: signer, isError, isLoading } = useSigner();
 
   const [provider, setProvider] = useState(defaultProvider);
   const { address: account } = useAccount();
@@ -52,16 +48,13 @@ function App() {
   }, [signer]);
 
   if (account) {
-  contracts.Main = new ethers.Contract(
-    ContractAddr.Main,
-    BigNFTABI,
-    signer
-  ); } else {
+    contracts.Main = new ethers.Contract(ContractAddr.Main, BigNFTABI, signer);
+  } else {
     contracts.Main = new ethers.Contract(
       ContractAddr.Main,
       BigNFTABI,
       defaultProvider
-    ); 
+    );
   }
 
   useEffect(() => {
@@ -88,7 +81,8 @@ function App() {
           disconnectWallet: open,
         }}
       >
-        <Router>
+        {/* <Router basename="/Deelance-WalletConnect-v2"> */}
+        <Router basename="/Deelance-WalletConnect-v2">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/nft-market" element={<NftMarket />} />
