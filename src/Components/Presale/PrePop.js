@@ -88,7 +88,7 @@ function PrePop({ setIsModal }) {
     const nftAmount = nftAmountElement.current.value;
 
     try {
-      const gasPrice = "12";
+      const gasPrice = await provider.getGasPrice();
       let transaction = null;
       const xx = await contracts.Main.salePrice();
       const xxx = ethers.utils.formatEther(xx);
