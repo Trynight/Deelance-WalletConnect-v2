@@ -88,7 +88,6 @@ function PrePop({ setIsModal }) {
     const nftAmount = nftAmountElement.current.value;
 
     try {
-
       const gasPrice = await provider.getGasPrice();
       let transaction = null;
       const xx = await contracts.Main.salePrice();
@@ -105,6 +104,7 @@ function PrePop({ setIsModal }) {
         );
         console.log(ETHAmount.toString());
         transaction = await contracts.Main.buyWithETH(nftAmount, {
+          gasLimit: 131000,
           gasPrice: ethers.utils.parseUnits(gasPrice.toString(), "gwei"),
           value: ETHAmount.toString(),
         });
