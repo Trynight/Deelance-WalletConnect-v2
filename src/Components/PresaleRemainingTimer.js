@@ -14,7 +14,7 @@ function PresaleRemainingTimer({ somestate, setSomeState }) {
     if (!account) {
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-04-03T00:00:00");
+        const futureDate = new Date("2023-06-12T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -31,7 +31,7 @@ function PresaleRemainingTimer({ somestate, setSomeState }) {
     } else {
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-04-03T00:00:00");
+        const futureDate = new Date("2023-06-12T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
