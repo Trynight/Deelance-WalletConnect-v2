@@ -34,63 +34,6 @@ function Team() {
             <div className="linked">
               <a
                 className="linked-in"
-                href="https://www.linkedin.com/in/suresh-joshi-61b3998"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedin />{" "}
-              </a>{" "}
-            </div>
-            <div className="text-center box-img">
-              <img src={Jhosi} alt="" />
-              <h2>SURESH JOSHI</h2>
-              <p>CO- FOUNDER</p>
-            </div>
-            <div className="team_details">
-              <p>
-                Having worked in the digital space for over 20 years he has
-                developed and delivered innovative communications across all
-                paid search media. His love for performance marketing and his
-                association with Finixio (London) an affiliation specialist in
-                the blockchain and crypto space, as a partner & performance
-                marketing head only enriched his clarity and vision on the
-                possibilities of blockchain...
-              </p>
-            </div>
-          </div>
-
-          <div className="team-box">
-            <div className="linked">
-              <a
-                className="linked-in"
-                href="https://www.linkedin.com/in/jagjeet-jena-a48452163"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedin />{" "}
-              </a>{" "}
-            </div>
-            <div className="text-center box-img">
-              <img src={Jagjeet} alt="" />
-              <h2>JAGJEET JENA</h2>
-              <p>PARTNER</p>
-            </div>
-            <div className="team_details">
-              <p>
-                CEO and Co-Founder of Battle Infinity( Metaverse Battle Games
-                Platform ). having vast Technical experience in
-                leadership.Always self motivated to find ideas, solution and
-                face challenging environment to prove skills. A creative mind
-                working alongside a superior team, on course to deliver a
-                project that exceeds all expectations.
-              </p>
-            </div>
-          </div>
-
-          <div className="team-box">
-            <div className="linked">
-              <a
-                className="linked-in"
                 href="https://www.linkedin.com/in/roberto-cinque/"
                 target="_blank"
                 rel="noreferrer"
