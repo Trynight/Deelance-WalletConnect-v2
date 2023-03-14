@@ -29,7 +29,6 @@ const PROJECT_ID = "4ff178b5adf37e8779469102693e824b";
 const { provider } = configureChains(
   [mainnet],
   [
-    w3mProvider({ projectId: PROJECT_ID }),
     infuraProvider({ apiKey: '7b50cd907db34540b993f3209ba55488' }),
   ],
 )
