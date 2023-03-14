@@ -17,6 +17,7 @@ import {
   w3mConnectors,
   w3mProvider,
 } from "@web3modal/ethereum";
+import { infuraProvider } from 'wagmi/providers/infura'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,9 +26,14 @@ const chains = [mainnet];
 //console.log(chains[0])
 const PROJECT_ID = "4ff178b5adf37e8779469102693e824b";
 // Wagmi client
-const { provider } = configureChains(chains, [
-  w3mProvider({ projectId: PROJECT_ID }),
-]);
+const { provider } = configureChains(
+  [mainnet],
+  [
+    w3mProvider({ projectId: PROJECT_ID }),
+    infuraProvider({ apiKey: '7b50cd907db34540b993f3209ba55488' }),
+  ],
+)
+
 
 //console.log("provider", provider)
 const wagmiClient = createClient({

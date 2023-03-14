@@ -26,11 +26,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   const defaultProvider = new ethers.providers.JsonRpcProvider(RPCUrl);
   const { data: signer, isError, isLoading } = useSigner();
-
-  const [provider, setProvider] = useState(defaultProvider);
+  const myProvider = useProvider();
+  const [provider, setProvider] = useState(myProvider);
   const { address: account } = useAccount();
   const [contracts, setContracts] = useState({});
-  const myProvider = useProvider();
+
 
   useEffect(() => {
     if (!signer?.provider) return;
@@ -53,7 +53,7 @@ function App() {
     contracts.Main = new ethers.Contract(
       ContractAddr.Main,
       BigNFTABI,
-      defaultProvider
+      myProvider
     );
   }
 
