@@ -14,8 +14,8 @@ import { mainnet} from "wagmi/chains";
 import { Web3Modal } from "@web3modal/react";
 import {
   EthereumClient,
-  modalConnectors,
-  walletConnectProvider,
+  w3mConnectors,
+  w3mProvider,
 } from "@web3modal/ethereum";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,13 +26,13 @@ const chains = [mainnet];
 const PROJECT_ID = "4ff178b5adf37e8779469102693e824b";
 // Wagmi client
 const { provider } = configureChains(chains, [
-  walletConnectProvider({ projectId: PROJECT_ID }),
+  w3mProvider({ projectId: PROJECT_ID }),
 ]);
 
 //console.log("provider", provider)
 const wagmiClient = createClient({
   autoConnect: true,
-  connectors: modalConnectors({
+  connectors: w3mConnectors({
     projectId: PROJECT_ID,
     version: "2", // or "2"
     appName: "web3Modal",
